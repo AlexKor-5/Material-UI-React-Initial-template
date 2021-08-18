@@ -3,34 +3,35 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
-import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
-import TextField from '@material-ui/core/TextField';
-
+import Header from "./Header/Header";
+import MyGridSystem from "./Grid/MyGridSystem";
+import MediaCard from "./Card/MediaCard";
 
 let destination = document.querySelector("#container");
 
 ReactDOM.render(
     <>
         <CssBaseline/>
+        <Header/>
         <Container maxWidth={"lg"}>
-            <ButtonGroup color="primary" aria-label="outlined primary button group">
-                <Button>One</Button>
-                <Button>Two</Button>
-                <Button>Three</Button>
-            </ButtonGroup>
-
-            <ButtonGroup
-                variant="contained"
-                color="default"
-                size="large"
-                aria-label="contained primary button group"
-            >
-                <Button>One</Button>
-                <Button>Two</Button>
-                <Button>Three</Button>
-            </ButtonGroup>
-            <TextField id="outlined-basic" label="Outlined" variant="outlined"/>
+            <h1>Lorem ipsum.</h1>
+            <h3>Lorem ipsum dolor sit amet, consectetur.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores blanditiis, consectetur
+                consequuntur corporis dolor dolorem doloremque enim eum id illum incidunt itaque magnam magni minus
+                nobis non pariatur porro possimus provident quaerat quam quasi quia quidem voluptate! Veniam,
+                voluptatum.</p>
+            <MyGridSystem {...{
+                first: <MediaCard/>,
+                second: <MediaCard/>,
+                third: <MediaCard/>,
+                fourth: <MediaCard/>
+            }}/>
+            <MyGridSystem {...{
+                first: <MediaCard/>,
+                second: <MediaCard/>,
+                third: <MediaCard/>,
+                fourth: <MediaCard/>
+            }}/>
         </Container>
     </>,
     destination
